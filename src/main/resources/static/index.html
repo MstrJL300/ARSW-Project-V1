@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="modone" ng-controller="plan_control">
+    
+    <head >
+        <script src="js/libs/angular.min.js"></script>
+        <script src="js/libs/angular-route.js"></script>
+        <script src="js/libs/appmodule.js"></script>
+        
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <title>Blueprints</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        {{o}}
+        
+        <select ng-model="o">
+            <option  ng-repeat="p in posts" value="{{p}}">
+                {{p}}
+            </option>
+        </select>
+        
+        <button ng-click="loadData()">Load blueprints</button>
+        
+        <button ng-click="select()">Select</button>
+        
+        <canvas id="myCanvas" width="800" height="600" style="border:1px solid"/> 
+    
+    </head>
+    
+    <body>
+
+        <span>
+          {{23+17}}
+        </span>
+        
+    </body>
+</html>

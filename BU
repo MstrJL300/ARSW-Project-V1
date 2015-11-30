@@ -1,0 +1,33 @@
+(
+    function () {
+        var app = angular.module('modone', []);
+
+        app.controller('plan_control', function($scope,$http){
+                
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                $scope.o = {};
+                
+                $scope.c.addEventListener('mousemove', function(evt) {
+                    $scope.o="xx";
+                }, false);
+                
+                $scope.select = function (){   
+                    var s2 = $scope.select2();
+                    $scope.o = $scope.select3();
+                };
+                
+                $scope.select2 = function (){  
+                    return{
+                        s:"ss"
+                    };
+                };
+                
+                $scope.select3 = function (){  
+                    var rect = c.getBoundingClientRect();
+                    return rect.bottom-rect.top;
+                };
+        });
+    }        
+)
+();

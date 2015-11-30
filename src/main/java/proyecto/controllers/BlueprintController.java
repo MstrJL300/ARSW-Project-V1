@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author jose
  */
 @RestController
-@RequestMapping("/blueprints")
+@RequestMapping("/materiales")
 public class BlueprintController {
     
     @Autowired

@@ -17,16 +17,41 @@ public class ServicesFacade {
     private static final Map<String,Blueprint> dummyBluePrints=new LinkedHashMap<>();
     
     static{
-        dummyBluePrints.put("larecta", new Blueprint("larecta",new Point[]{new Point(50,50),new Point(200,200)}));
-        dummyBluePrints.put("rayon",new Blueprint("rayon",new Point[]{new Point(20,20),
-                                                      new Point(300,300),
-                                                      new Point(450,550)
-        }));
-        dummyBluePrints.put("poligono1",new Blueprint("poligono1",new Point[]{new Point(150,150),
-                                                                              new Point(50,200),
-                                                                              new Point(150,300),
-                                                                              new Point(200,200),
-                                                                              new Point(150,150),}));    
+        
+        dummyBluePrints.put(
+            "larecta", 
+            new Blueprint(
+                "larecta",
+                new Point[]{
+                    new Point(50,50),
+                    new Point(200,200)
+                }
+            )
+        );
+        
+        dummyBluePrints.put(
+            "rayon",new Blueprint(
+                "rayon",new Point[]{
+                    new Point(20,20),
+                    new Point(300,300),
+                    new Point(450,550) 
+                }
+            )
+        );
+        
+        dummyBluePrints.put(            
+            "poligono",                
+            new Blueprint(                
+                "poligono",                    
+                new Point[]{
+                    new Point(150,150),
+                    new Point(50,200),
+                    new Point(150,300),
+                    new Point(200,200),
+                    new Point(150,150)
+                }
+            )
+        );    
     }
     
     public void addNewBlueprint(String name,Blueprint bp){

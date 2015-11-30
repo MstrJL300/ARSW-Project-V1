@@ -5,33 +5,41 @@
         <script src="js/libs/angular.min.js"></script>
         <script src="js/libs/angular-route.js"></script>
         <script src="js/libs/appmodule.js"></script>
+        <script>
+            function myFunction(e) {
+                var x = e.clientX;
+                var y = e.clientY;
+                var coor = "Coordinates: (" + x + "," + y + ")";
+                document.getElementById("demo").innerHTML = coor;
+            };
+        </script>
         
         <link rel="stylesheet" href="css/bootstrap.css">
-        <title>Blueprints</title>
+        <title>PROYECTO</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <p> 
+            &nbsp;&nbsp;rrr
+        </p>	
+        <hr style="border:1px solid">
         
-        {{o}}
+        <table border="0" >
+            <tr>
+              <td> 
+                <p> &nbsp;&nbsp;{{o}}
+                <p> &nbsp;&nbsp;<button class="btn btn-warning">Lapiz</button>
+                <p id="demo">sss</p>
+              </td>
+              <td> 
+                  &nbsp;
+                  <canvas id="myCanvas" ng-click="coordinates()" width="500" height="500" style="border:1px solid" /> 
+              </td>
+            </tr>
+        </table>
         
-        <select ng-model="o">
-            <option  ng-repeat="p in posts" value="{{p}}">
-                {{p}}
-            </option>
-        </select>
-        
-        <button ng-click="loadData()">Load blueprints</button>
-        
-        <button ng-click="select()">Select</button>
-        
-        <canvas id="myCanvas" width="800" height="600" style="border:1px solid"/> 
-    
     </head>
     
-    <body>
-
-        <span>
-          {{23+17}}
-        </span>
-        
+    <body>        
     </body>
+    
 </html>
